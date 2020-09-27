@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box; }
 
@@ -22,7 +23,7 @@ p {
 
 body {
   color: #2f3035;
-  font-family: sans-serif;
+  font-family: "SFProDisplay-Regular", sans-serif;
   font-size: 20px;
   line-height: 24px;
   font-weight: 400; }
@@ -108,7 +109,7 @@ body {
   position: relative; }
   .cart-num {
     position: absolute;
-    bottom: -15px;
+    bottom: -3px;
     right: -14px;
     font-family: "SFProDisplay-Medium", sans-serif;
     font-weight: 500;
@@ -317,7 +318,7 @@ body {
   .categories__item-title {
     font-size: 23px;
     line-height: 28px;
-    font-family: "Barlow", sans-serif;
+    font-family: "Barlow", "SFProDisplay-Bold", sans-serif;
     font-weight: 700;
     transition: all 0.3s; }
   .categories__item-text {
@@ -350,7 +351,7 @@ body {
       padding-bottom: 10px; }
 
 .product-title {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow", "SFProDisplay-Bold", sans-serif;
   font-size: 25px;
   line-height: 30px;
   color: #2f3035;
@@ -381,8 +382,7 @@ body {
   transition: all 0.3s; }
   .product-item__wrapper {
     position: relative;
-    width: 271px;
-    font-family: "SFProDisplay-Regular", sans-serif; }
+    width: 271px; }
     .product-item__wrapper:hover {
       box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25); }
     .product-item__wrapper.product-item__not-available .product-item__price {
@@ -494,9 +494,9 @@ body {
     font-weight: 700; }
   .product-item__img {
     display: block;
-    width: 100%;
     margin: 0 auto;
-    max-height: 200px; }
+    max-height: 200px;
+    max-width: 175px; }
 .product-more {
   text-align: center;
   margin: 35px 0 0; }
@@ -655,6 +655,94 @@ body {
             display: inline-block;
             padding-bottom: 7px;
             border-bottom: 2px solid #1c62cd; }
+      .catalogue__inner-aside .aside-filter__item-drop {
+        margin: 40px 0; }
+      .catalogue__inner-aside .aside-filter__item-title {
+        font-family: "SFProDisplay-Semibold", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        padding-left: 26px; }
+        .catalogue__inner-aside .aside-filter__item-title.filter__item-drop {
+          position: relative;
+          cursor: pointer; }
+          .catalogue__inner-aside .aside-filter__item-title.filter__item-drop:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            width: 12px;
+            height: 8px;
+            background-image: url("../images/arrow-down.svg"); }
+          .catalogue__inner-aside .aside-filter__item-title.filter__item-drop.filter__item-drop--active:before {
+            transform: rotate(180deg); }
+      .catalogue__inner-aside .aside-filter__content {
+        display: flex;
+        margin-top: 20px; }
+        .catalogue__inner-aside .aside-filter__content--hidden {
+          display: none; }
+        .catalogue__inner-aside .aside-filter__content-box {
+          width: 50%; }
+        .catalogue__inner-aside .aside-filter__content-label {
+          font-size: 14px;
+          line-height: 17px;
+          cursor: pointer; }
+          .catalogue__inner-aside .aside-filter__content-label .jq-checkbox,
+          .catalogue__inner-aside .aside-filter__content-label .jq-radio {
+            background: #fff;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #c4c4c4;
+            box-shadow: none;
+            vertical-align: -2px; }
+            .catalogue__inner-aside .aside-filter__content-label .jq-checkbox.checked,
+            .catalogue__inner-aside .aside-filter__content-label .jq-radio.checked {
+              background-color: #1c62cd;
+              border: none; }
+              .catalogue__inner-aside .aside-filter__content-label .jq-checkbox.checked .jq-checkbox__div,
+              .catalogue__inner-aside .aside-filter__content-label .jq-checkbox.checked .jq-radio__div,
+              .catalogue__inner-aside .aside-filter__content-label .jq-radio.checked .jq-checkbox__div,
+              .catalogue__inner-aside .aside-filter__content-label .jq-radio.checked .jq-radio__div {
+                width: 8px;
+                height: 6px;
+                border-bottom: none;
+                border-left: none;
+                transform: rotate(0);
+                background-image: url("../images/checkmark.svg"); }
+              .catalogue__inner-aside .aside-filter__content-label .jq-checkbox.checked .jq-radio__div,
+              .catalogue__inner-aside .aside-filter__content-label .jq-radio.checked .jq-radio__div {
+                width: 0;
+                height: 0;
+                background: transparent; }
+        .catalogue__inner-aside .aside-filter__content .irs--flat {
+          width: 100%;
+          margin-top: -15px; }
+        .catalogue__inner-aside .aside-filter__content .irs-from,
+        .catalogue__inner-aside .aside-filter__content .irs-to,
+        .catalogue__inner-aside .aside-filter__content .irs-bar,
+        .catalogue__inner-aside .aside-filter__content .irs-single {
+          display: none; }
+        .catalogue__inner-aside .aside-filter__content .irs-min,
+        .catalogue__inner-aside .aside-filter__content .irs-max {
+          top: 60px;
+          padding: 0;
+          font-family: "Barlow", sans-serif;
+          font-size: 14px;
+          line-height: 17px;
+          text-decoration: underline;
+          color: #2f3035;
+          background-color: transparent;
+          visibility: visible !important; }
+          .catalogue__inner-aside .aside-filter__content .irs-min:before,
+          .catalogue__inner-aside .aside-filter__content .irs-max:before {
+            margin-right: 12px;
+            font-family: "SFProDisplay-Regular", sans-serif;
+            color: #c4c4c4;
+            text-decoration: none; }
+        .catalogue__inner-aside .aside-filter__content .irs-min:before {
+          content: "╨╛╤В"; }
+        .catalogue__inner-aside .aside-filter__content .irs-max:before {
+          content: "╨┤╨╛"; }
     .catalogue__inner-list {
       display: flex;
       justify-content: space-between;

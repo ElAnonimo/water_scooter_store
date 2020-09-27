@@ -28,7 +28,7 @@ p {
 
 body {
   color: #2f3035;
-  font-family: sans-serif;
+  font-family: "SFProDisplay-Regular", sans-serif;
   font-size: 20px;
   line-height: 24px;
   font-weight: 400;
@@ -144,7 +144,7 @@ body {
   position: relative;
   &-num {
     position: absolute;
-    bottom: -15px;
+    bottom: -3px;
     right: -14px;
     font-family: "SFProDisplay-Medium", sans-serif;
     font-weight: 500;
@@ -417,7 +417,7 @@ body {
     &-title {
       font-size: 23px;
       line-height: 28px;
-      font-family: "Barlow", sans-serif;
+      font-family: "Barlow", "SFProDisplay-Bold", sans-serif;
       font-weight: 700;
       transition: all 0.3s;
     }
@@ -471,7 +471,7 @@ body {
 
 .product {
   &-title {
-    font-family: "Barlow", sans-serif;
+    font-family: "Barlow", "SFProDisplay-Bold", sans-serif;
     font-size: 25px;
     line-height: 30px;
     color: #2f3035;
@@ -516,7 +516,7 @@ body {
       }
       position: relative;
       width: 271px;
-      font-family: "SFProDisplay-Regular", sans-serif;
+      // font-family: "SFProDisplay-Regular", sans-serif;
       &.product-item__not-available {
         .product-item__price {
           display: none;
@@ -655,9 +655,10 @@ body {
     }
     &__img {
       display: block;
-      width: 100%;
+      // width: 100%;
       margin: 0 auto;
       max-height: 200px;
+      max-width: 175px;
     }
   }
   &-more {
@@ -862,6 +863,120 @@ body {
               display: inline-block;
               padding-bottom: 7px;
               border-bottom: 2px solid #1c62cd;
+            }
+          }
+        }
+        &__item-drop {
+          margin: 40px 0;
+        }
+        &__item-title {
+          font-family: "SFProDisplay-Semibold", sans-serif;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          padding-left: 26px;
+          &.filter__item-drop {
+            // margin-bottom: 20px;
+            position: relative;
+            cursor: pointer;
+            &:before {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 5px;
+              width: 12px;
+              height: 8px;
+              background-image: url("../images/arrow-down.svg");
+            }
+            &.filter__item-drop--active {
+              &:before {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+        &__content {
+          &--hidden {
+            display: none;
+          }
+          display: flex;
+          // flex-wrap: wrap;
+          margin-top: 20px;
+          &-box {
+            width: 50%;
+          }
+          &-label {
+            font-size: 14px;
+            line-height: 17px;
+            cursor: pointer;
+            .jq-checkbox,
+            .jq-radio {
+              background: #fff;
+              width: 14px;
+              height: 14px;
+              border: 1px solid #c4c4c4;
+              box-shadow: none;
+              vertical-align: -2px;
+              &.checked {
+                background-color: #1c62cd;
+                border: none;
+                .jq-checkbox__div,
+                .jq-radio__div {
+                  width: 8px;
+                  height: 6px;
+                  border-bottom: none;
+                  border-left: none;
+                  transform: rotate(0);
+                  background-image: url("../images/checkmark.svg");
+                }
+                .jq-radio__div {
+                  width: 0;
+                  height: 0;
+                  // border-bottom: none;
+                  // border-left: none;
+                  // transform: rotate(0);
+                  background: transparent;
+                }
+              }
+            }
+          }
+          .irs--flat {
+            width: 100%;
+            margin-top: -15px;
+          }
+          .irs-from,
+          .irs-to,
+          .irs-bar,
+          .irs-single {
+            display: none;
+          }
+          .irs-min,
+          .irs-max {
+            top: 60px;
+            padding: 0;
+            font-family: "Barlow", sans-serif;
+            font-size: 14px;
+            line-height: 17px;
+            text-decoration: underline;
+            color: #2f3035;
+            background-color: transparent;
+            visibility: visible !important;
+            &:before {
+              margin-right: 12px;
+              font-family: "SFProDisplay-Regular", sans-serif;
+              color: #c4c4c4;
+              text-decoration: none;
+              // text-decoration-line: none;
+            }
+          }
+          .irs-min {
+            &:before {
+              content: "от";
+            }
+          }
+          .irs-max {
+            &:before {
+              content: "до";
             }
           }
         }

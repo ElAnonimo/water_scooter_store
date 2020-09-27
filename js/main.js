@@ -43,4 +43,22 @@ $(function() {
       </button>
     `
   });
+
+  $(".filter-style").styler();
+
+  $(".filter__item-drop").on("click", function() {
+    // $(this).siblings().removeClass("filter__item-drop--active");
+    $(this).toggleClass("filter__item-drop--active");
+    $(this).next(".aside-filter__content").slideToggle(200);
+    // $(".aside-filter__content").toggleClass("aside-filter__content--hidden");
+  });
+
+  $(".js-range-slider").ionRangeSlider({
+    grid: false,
+    type: "double",
+    min: 100000,
+    max: 500000,
+    from: 150000,
+    to: 450000
+  });
 });
